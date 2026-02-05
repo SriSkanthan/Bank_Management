@@ -1,0 +1,15 @@
+The system should simulate a basic ATM/Bank application 
+where users can create or access an account using an account number and PIN, 
+view their current balance, deposit and withdraw money with proper validation, 
+and see a simple transaction history. 
+
+The application should be menu-driven, support multiple users, 
+use clear object-oriented design (separate classes for account, user, and bank logic), 
+handle invalid inputs gracefully, and optionally save/load account data so information persists between runs. 
+Focus on clean logic, realistic rules (no negative balance, PIN checks), and readable console output.
+
+
+thoughts while working on this:
+1.transaction dataset should have from_ID, to_ID, amount... 
+2. while transfering we can update the amount immedieately in to_ID account after checking the balance in from_ID account...
+3. menu can be user specific I guess.. 
