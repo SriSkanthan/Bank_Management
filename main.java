@@ -11,7 +11,7 @@ class Main {
         System.out.print("Please enter your ID: ");
         from_ID = scanner.nextInt();
         System.out.print("Please enter your PIN: ");
-        int enteredPIN = scanner.nextInt();
+        String enteredPIN = scanner.next();
 
         if (verification.verifyPIN(from_ID, enteredPIN)) {
             System.out.println("Access granted. You can now use the ATM.");

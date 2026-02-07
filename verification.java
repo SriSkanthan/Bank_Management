@@ -1,13 +1,13 @@
 import java.util.List;
 
 public class verification {
-    public static boolean verifyPIN(int id, int enteredPIN) {
+    public static boolean verifyPIN(int id, String enteredPIN) {
         List<String[]> data = csv_reader.main(null); // Read data from CSV file
         // Convert List<String[]> to 2D array if needed
         String[][] array = data.toArray(new String[0][]);
 
         for (String[] row : array) {
-            if (row.length >= 2 && Integer.parseInt(row[0]) == id && Integer.parseInt(row[1]) == enteredPIN) {
+            if (row.length >= 2 && Integer.parseInt(row[0]) == id && row[1].equals(enteredPIN)) {
                 return true;
             }
         }
