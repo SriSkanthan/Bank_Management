@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class menu {
     public static void main(String[] args) {
         int id = Main.from_ID; // Accessing the static ID from Main class
+        account account = new account();
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the ATM Menu!");
         System.out.println("1. Withdraw Money");
         System.out.println("2. Deposit Money");
@@ -14,19 +18,28 @@ public class menu {
         switch (choices) {
             case 1:
                 System.out.println("You selected Withdraw Money.");
-                // Call withdraw functionality here
+                System.out.print("Enter amount to withdraw: ");
+                double amount = scanner.nextDouble();
+                account.withdraw(id, amount);
                 break;
             case 2:
                 System.out.println("You selected Deposit Money.");
-                // Call deposit functionality here
+                System.out.print("Enter amount to deposit: ");
+                amount = scanner.nextDouble();
+                account.deposit(id, amount);
                 break;
             case 3:
                 System.out.println("You selected Check Balance.");
-                // Call balance functionality here
+                account.checkBalance(id);
                 break;
             case 4:
                 System.out.println("You selected Transfer Funds.");
-                // Call transfer functionality here
+                System.out.print("Enter amount to transfer: ");
+                amount = scanner.nextDouble();
+                System.out.print("Enter recipient account ID: ");
+                int to_ID = scanner.nextInt();
+                account.deposit(to_ID, amount);
+                account.withdraw(id, amount);
                 break;
             case 5:
                 System.out.println("Exiting the ATM. Thank you!");
@@ -34,6 +47,7 @@ public class menu {
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
+        scanner.close();
 
     }
 }
