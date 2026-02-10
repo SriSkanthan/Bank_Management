@@ -1,8 +1,6 @@
 import java.util.List;
 
 public class account {
-    // add all account, balance, withdraw, deposit, verification methods here
-    // so we can later call them from a single class like account.methodName()
     List<String[]> data = csv_reader.main(null); // Read data from CSV file
     // Convert List<String[]> to 2D array if needed
     String[][] array = data.toArray(new String[0][]);
