@@ -2,7 +2,7 @@ import java.util.List;
 
 public class verification {
     public static boolean verifyPIN(int id, String enteredPIN) {
-        List<String[]> data = csv_reader.main(null); // Read data from CSV file
+        List<String[]> data = PostgreSQLReader.readAccounts(); // Read data from PostgreSQL database
         // Convert List<String[]> to 2D array if needed
         String[][] array = data.toArray(new String[0][]);
 

@@ -14,7 +14,8 @@ public class menu {
 
         // Additional menu functionality can be implemented here for example: like the
         // if else statemnts to handle user choices.
-        int choices = 0; // Placeholder for user choice input
+        System.out.print("Enter your choice: ");
+        int choices = scanner.nextInt(); // Read user choice input
         switch (choices) {
             case 1:
                 System.out.println("You selected Withdraw Money.");
@@ -30,7 +31,8 @@ public class menu {
                 break;
             case 3:
                 System.out.println("You selected Check Balance.");
-                account.checkBalance(id);
+                double balance = account.checkBalance(id);
+                System.out.println("Your current balance is: $" + balance);
                 break;
             case 4:
                 System.out.println("You selected Transfer Funds.");
