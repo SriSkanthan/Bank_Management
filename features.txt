@@ -14,3 +14,4 @@ thoughts while working on this:
 2. while transfering we can update the amount immedieately in to_ID account after checking the balance in from_ID account...
 3. menu can be user specific I guess.. 
 4. created a csv reader class to access main_dataset.csv where ever i want
+5. updated the csv to postgres sql.. 
